@@ -191,7 +191,7 @@ const app = {
             element.offsetParent.children[index].classList.add('fade-out');
         }
         else {
-            countElement.innerHTML = count;
+            countElement.innerHTML = '0';
             element.offsetParent.children[index].classList.add('fade-out');
         };
         _this.getTotalProduct();
@@ -252,7 +252,7 @@ const app = {
                 let count = +countElement.innerHTML - 1;
                 let id = countElement.id;
                 
-                if(count) {
+                if(count > 0) {
                     _this.handleCount(id, count, countElement, cartItems);
                 }
                 else {
